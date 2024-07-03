@@ -5,12 +5,12 @@
 ___
 
 
-`+` // example : @telegramIran
+` // example : @telegramIran `
 >var ChannelId = "ادرس پابلیک کانال تلگرام هم اینجا بذارین" 
 ___
 دقت کنید که ادرس و api تلگرام به صورت worker تلگرام معرفی شده در برنامه در زیر ادرس رو براتون میذارم : 
 
-`+` // api.telegram.org => worker
+` // api.telegram.org => worker ` 
 >https://mtorgforiranserver.mohammad-bahonar1.workers.dev/
 
 ___
