@@ -37,8 +37,10 @@ async function handleRequest(request) {
 		},
 	  });
 	}
-```csharp
+
   }
   addEventListener('fetch', (event) => {
 	event.respondWith(handleRequest(event.request));
 });
+```
+رلللل
