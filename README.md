@@ -48,3 +48,6 @@ ___
 آموزش ساخت ورکر تلگرام مسیر زیر را طی کنید : 
 
 go to  - __[cloudflare.com](https://cloudflare.com/)__ => signUp => login => Workers & Pages => create => Create Worker => add Name for Worker => select deploy => Edit Code => paste up Code => select deploy => Finish
+___
+
+اگر سرور غیر ایران استفاده میکنید یا در ایران نیستید نیازی به روش ورکر ندارید. از این روش در صورتی استفاده کنید که یا سرور ایران وظیفه اجرای پروژه شما رو دارد یا با سیستم شخصی که در ایران هست دارین انجام میدید.
