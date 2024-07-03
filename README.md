@@ -16,7 +16,7 @@ https://mtorgforiranserver.mohammad-bahonar1.workers.dev/
 
 آدرس بالا رو با ادرس ورکر خودتون در کلود فلر جایگزین کنین. که روزانه بهتون صد هزار ریکوئست رو اجازه رو بده .
 
-
+```csharp
 async function handleRequest(request) {
 	const url = new URL(request.url);
 	// Change the hostname to 'api.telegram.org'
