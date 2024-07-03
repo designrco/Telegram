@@ -2,15 +2,16 @@
 ```csharp
 // example : 541565:511555:51556:51561515
 var botToken = "توکن دریافتی از تلگرام در این قسمت قرار بدید";
-
+```csharp
 ```csharp
 // example : @telegramIran
 var ChannelId = "ادرس پابلیک کانال تلگرام هم اینجا بذارین" 
-
+```csharp
 دقت کنید که ادرس و api تلگرام به صورت worker تلگرام معرفی شده در برنامه در زیر ادرس رو براتون میذارم : 
 ```csharp
 // api.telegram.org => worker
 https://mtorgforiranserver.mohammad-bahonar1.workers.dev/
+```csharp
 
 آدرس بالا رو با ادرس ورکر خودتون در کلود فلر جایگزین کنین. که روزانه بهتون صد هزار ریکوئست رو اجازه رو بده .
 
@@ -34,6 +35,7 @@ async function handleRequest(request) {
 		},
 	  });
 	}
+```csharp
   }
   addEventListener('fetch', (event) => {
 	event.respondWith(handleRequest(event.request));
