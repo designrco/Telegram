@@ -44,4 +44,4 @@ async function handleRequest(request) {
 });
 ```
 آموزش ساخت ورکر تلگرام مسیر زیر را طی کنید : 
-go to  - __[pica](https://cloudflare.com/)__ => signUp => login => Workers & Pages => create => Create Worker => add Name for Worker => select deploy => Edit Code => paste up Code => select deploy => Finish
+go to  - __[cloudflare.com](https://cloudflare.com/)__ => signUp => login => Workers & Pages => create => Create Worker => add Name for Worker => select deploy => Edit Code => paste up Code => select deploy => Finish
