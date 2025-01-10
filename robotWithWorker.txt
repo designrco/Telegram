@@ -1,0 +1,49 @@
+اول ورکر ساخته شده رو به این مدل بهش میدیم
+
+https://api.telegram.org/bot<YOUR_BOT_TOKEN>/setWebhook?url=<YOUR_WORKER_URL>
+
+بعد به ورکر این کد رو میدیم
+
+const TELEGRAM_BOT_TOKEN = 'Token'; // توکن ربات شما
+const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+// این تابع برای پردازش درخواست‌های ورودی از تلگرام است
+async function handleRequest(request) {
+  try {
+    const update = await request.json(); // دریافت پیام از تلگرام
+
+    // بررسی اینکه پیام دارای متن باشد
+    if (update.message && update.message.text) {
+      const chat_id = update.message.chat.id; // شناسه چت کاربر
+      const user_message = update.message.text; // پیام ارسالی از کاربر
+
+      // اگر پیام /start باشد
+      if (user_message === '/start') {
+        // ارسال پیام "سلام" به کاربر
+        const response = await fetch(TELEGRAM_API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: chat_id,
+            text: 'سلام! خوش آمدید به ربات تلگرام!',
+          }),
+        });
+
+        // دریافت نتیجه از تلگرام
+        const result = await response.json();
+        return new Response(JSON.stringify(result), { status: 200 });
+      }
+    }
+
+    // اگر پیام نداشت یا پیام غیر از /start بود، پاسخ OK را ارسال می‌کنیم
+    return new Response('OK', { status: 200 });
+  } catch (error) {
+    // اگر خطایی پیش آمد
+    return new Response('Error processing request', { status: 500 });
+  }
+}
+
+// این رویداد برای مدیریت درخواست‌های ورودی به Worker است
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
